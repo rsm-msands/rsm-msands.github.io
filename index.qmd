@@ -1,0 +1,17 @@
+---
+title: "Madeline Sands"
+image: "files/profile_pic.jpg"
+
+about:
+    template: jolla
+    links:
+      - icon: envelope
+        href: mailto:m.h.sands2012@gmail.com
+      - icon: linkedin
+        href: https://www.linkedin.com/in/madeline-sands/
+---
+
+Hi! Welcome to my website. I am a part time Masters of Business Analytics student at Rady's school of Business at University of California, San Diego. 
+
+
+

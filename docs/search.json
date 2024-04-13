@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Madeline Sands",
+    "section": "",
+    "text": "Hi! Welcome to my website. I am a part time Masters of Business Analytics student at Rady’s school of Business at University of California, San Diego."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Madeline Sands",
+    "section": "",
+    "text": "Hi! Welcome to my website. I am a part time Masters of Business Analytics student at Rady’s school of Business at University of California, San Diego."
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Madeline Sands’s Resumes",
+    "section": "",
+    "text": "Download PDF file."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Madeline Sands’s projects",
+    "section": "",
+    "text": "My main Project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/project1/project1.html",
+    "href": "projects/project1/project1.html",
+    "title": "My main Project",
+    "section": "",
+    "text": "i like data\n\n\ni like to analyze data"
+  },
+  {
+    "objectID": "projects/project1/project1.html#sub-header",
+    "href": "projects/project1/project1.html#sub-header",
+    "title": "My main Project",
+    "section": "",
+    "text": "i like to analyze data"
+  }
+]
