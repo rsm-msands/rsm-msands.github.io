@@ -16,5 +16,8 @@
   },
   "projects/project2/project2.qmd": {
     "project2.html": "c32d29ab"
+  },
+  "project1.ipynb": {
+    "project1.html": "fca60e94"
   }
 }

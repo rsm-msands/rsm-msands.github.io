@@ -16,6 +16,7 @@ This project seeks to replicate their results.
 ## Data
 
 ```{python}
+import yaml
 import numpy as np 
 import pandas as pd 
 
@@ -98,7 +99,8 @@ As an ad hoc test of the randomization mechanism, I provide a series of tests th
 I have created a function called `t_test_calc` that calculates the t_stat and indicates if there is statistically signigicant difference between the variables in the treatment and test groups at a pre-determined confidence interval. 
 
 _todo: test a few variables other than the key outcome variables (for example, test months since last donation) to see if the treatment and control groups are statistically significantly different at the 95% confidence level. Do each as a t-test and separately as a linear regression, and confirm you get the exact same results from both methods. When doing a t-test, use the formula in the class slides. When doing the linear regression, regress for example mrm2 on treatment and look at the estimated coefficient on the treatment variable. It might be helpful to compare parts of your analysis to Table 1 in the paper. Be sure to comment on your results (hint: why is Table 1 included in the paper)._
-```python
+
+```{python}
 def t_test_calc(data, treatment_col, control_col, outcome_col):
     treatment = data[data[treatment_col] == 1]
     control = data[data[control_col] == 1]
@@ -111,7 +113,6 @@ def t_test_calc(data, treatment_col, control_col, outcome_col):
     n_control = len(control)
     t_stat = diff_means / np.sqrt((std_treatment**2/n_treatment) + (std_control**2/n_control))
     return t_stat
-
 ```
 
 ## Experimental Results
@@ -145,6 +146,8 @@ for i, v in enumerate(karlan_grouped):
 
 plt.show()
 ```
+
+![plot of treatment vs. control group](files/treatment_vs_control_plot.png)
 
 _todo: run a t-test between the treatment and control groups on the binary outcome of whether any charitable donation was made. Also run a bivariate linear regression that demonstrates the same finding. (It may help to confirm your calculations match Table 2a Panel A.) Report your statistical results and interpret them in the context of the experiment (e.g., if you found a difference with a small p-value or that was statistically significant at some threshold, what have you learned about human behavior? Use mostly English words, not numbers or stats, to explain your finding.)_
 
