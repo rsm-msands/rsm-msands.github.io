@@ -1,4 +1,3 @@
-
 project:
   type: website
   output-dir: docs
@@ -19,7 +18,3 @@ format:
     theme: flatly
     css: styles.css
     toc: true
-
-
-
-
