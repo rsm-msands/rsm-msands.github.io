@@ -16,7 +16,6 @@ This project seeks to replicate their results.
 ## Data
 
 ```{python}
-import yaml
 import numpy as np 
 import pandas as pd 
 
@@ -30,7 +29,6 @@ Below is the data from the Karlan et. al 2007 data. Of a sample of 50,083 indivi
 ```{python}
 karlan_df.info()
 karlan_df.describe()
-
 ```
 :::: {.callout-note collapse="true"}
 ### Variable Definitions
@@ -115,13 +113,31 @@ def t_test_calc(data, treatment_col, control_col, outcome_col):
     return t_stat
 ```
 
+```{python}
+from sklearn.linear_model import LinearRegression
+
+# Assuming data is a pandas DataFrame with columns 'outcome_variable', 'treatment', and 'other_variable'
+X = karlan_df[['treatment']]  # Features
+y = karlan_df['mrm2']  # Target variable
+
+# Create a linear regression model
+model = LinearRegression()
+
+# Fit the model to the data
+model.fit(X, y)
+
+# Print coefficients
+print('Coefficients:', model.coef_)
+print('Intercept:', model.intercept_)
+```
+
+I believe that table 1 is included in the paper because of XXX. 
 ## Experimental Results
 
 ### Charitable Contribution Made
 
-First, I analyze whether matched donations lead to an increased response rate of making a donation. 
+First, I analyzed whether matched donations lead to an increased response rate of making a donation. 
 
-_todo: make a barplot with two bars. Each bar is the proportion of people who donated. One bar for treatment and one bar for control._
 
 ```{python}
 import matplotlib as plt
@@ -151,6 +167,9 @@ plt.show()
 
 _todo: run a t-test between the treatment and control groups on the binary outcome of whether any charitable donation was made. Also run a bivariate linear regression that demonstrates the same finding. (It may help to confirm your calculations match Table 2a Panel A.) Report your statistical results and interpret them in the context of the experiment (e.g., if you found a difference with a small p-value or that was statistically significant at some threshold, what have you learned about human behavior? Use mostly English words, not numbers or stats, to explain your finding.)_
 
+
+```{python}
+```
 _todo: run a probit regression where the outcome variable is whether any charitable donation was made and the explanatory variable is assignment to treatment or control. Confirm that your results replicate Table 3 column 1 in the paper._
 
 
@@ -167,7 +186,7 @@ _todo: Calculate the response rate difference between the 1:1 and 2:1 match rati
 
 ### Size of Charitable Contribution
 
-In this subsection, I analyze the effect of the size of matched donation on the size of the charitable contribution.
+In this subsection, I analyzed the effect of the size of matched donation on the size of the charitable contribution.
 
 _todo: Calculate a t-test or run a bivariate linear regression of the donation amount on the treatment status. What do we learn from doing this analysis?_
 
